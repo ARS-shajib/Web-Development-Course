@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning about position</title>
+    <style>
+        .swimming div {
+            border: 1px dashed palegreen;
+            width: 200px;
+            height: 200px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #sex {
+            position: sticky;
+            top: 0;
+            color: aquamarine;
+            background-color: black;
+        }
+
+        #top-pic {
+            position: fixed;
+            top: 0;
+            left: 100px;
+            z-index: 1;
+        }
+
+        #mid-pic {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .bottom-pic {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1 id="sex">this is relative position</h1>
+        <h1>this is absolute position</h1>
+        <h1>this is sticky position</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+        <h1>fuck you</h1>
+    </section>
+    <section class="swimming">
+        <div id="top-pic"><img src="images/my-pic.png" alt=""></div>
+        <div id="mid-pic"><img src="images/my-ex.png" alt=""></div>
+        <div class="bottom-pic"><img src="images/jhankar.png" alt=""></div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+        <div class="dummy">DYD</div>
+    </section>
+
+</body>
+
+</html>

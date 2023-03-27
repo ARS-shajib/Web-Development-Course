@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: aquamarine;
+            margin-left: 20%;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        h1:hover {
+            color: aqua;
+            background-color: blue;
+        }
+
+        .ff:focus {
+            color: red;
+            font-weight: 700;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        li:first-child {
+            color: bisque;
+        }
+
+        li:last-child {
+            background-color: aqua;
+        }
+
+        li:nth-child(2n) {
+            color: blue;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: gray;
+        }
+
+        h3::before {
+            content: 'Hello ';
+        }
+    </style>
+</head>
+<!-- 
+    :: used for pseudo element. 
+    : used for pseudo class. 
+-->
+<!--
+    inline tag && block tag list==> https://www.w3schools.com/html/html_blocks.asp
+    for block we can use height,width,padding top,bottom,margin top,bottom.(but for inline we cann't).
+-->
+
+<body>
+    <h1>Abdur Rahman</h1>
+    <span>ami</span>
+    <span>tumi</span>
+    <span>danish</span>
+    <div>
+        <input type="text">
+        <input class="ff" type="text">
+        <input type="text">
+    </div>
+    <a target="_blank" href="https://www.google.com/">Google</a>
+    <a target="_blank" href="https://www.youtube.com/">You tube</a>
+    <a target="_blank" href="https://www.facebook.com/">facebook</a>
+    <br>
+    <h3>gentleman -1</h3>
+    <h3>gentleman -2</h3>
+    <h3>gentleman -3</h3>
+    <h3>gentleman -4</h3>
+    <h3>gentleman -5</h3>
+    <h3>gentleman -6</h3>
+    <ul>
+        <li>aria</li>
+        <li>bria</li>
+        <li>cria</li>
+        <li>dria</li>
+        <li>eria</li>
+        <li>gria</li>
+        <li>haria</li>
+    </ul>
+</body>
+
+</html>
