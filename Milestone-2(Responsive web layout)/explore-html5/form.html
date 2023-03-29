@@ -6,11 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/nav.css">
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="Semantic.html">Semantic</a></li>
+        </ul>
+    </nav>
     <h1>Jamaler Ma Shipping lines</h1>
-    <form action=""></form>
+    <form action="">
+        <p>Name: <input type="text" name="name" placeholder="Enter your name" id=""> </p>
+        <p>Email: <input type="text" name="email" placeholder="Enter your email" id=""> </p>
+        <fieldset>
+            <legend>Select your launch</legend>
+            <p>
+                <label for="sundarban">
+                    <input type="radio" name="launch" id="sundarban">sundarban-10</label>
+            </p>
+            <p>
+                <label for="parabat">
+                    <input type="radio" name="launch" id="parabat">parabat-11</label>
+            </p>
+            <p>
+                <label for="kirtunkhula">
+                    <input type="radio" name="launch" id="kirtunkhula">kirtunkhula-10</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Collect your ticket</legend>
+            <p>
+                <label for="one"><input type="checkbox" name="ticket" id="one">1 ticket=350tk</label>
+            </p>
+            <p>
+                <label for="two"><input type="checkbox" name="ticket" id="two">2 ticket=700tk</label>
+            </p>
+            <p>
+                <label for="three"><input type="checkbox" name="ticket" id="three">3 ticket=1050tk</label>
+            </p>
+        </fieldset>
+        <p>
+            Special Instruction...
+            <br>
+            <textarea name="Instruction" id="" cols="30" rows="10"></textarea>
+        </p>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
 </body>
 
 </html>
