@@ -2,6 +2,7 @@ nav>ul {
     display: flex;
 }
 
+/* comment for css file */
 nav li {
     list-style: none;
     margin-right: 20px;
