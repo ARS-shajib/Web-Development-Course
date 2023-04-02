@@ -19,6 +19,7 @@
             border-radius: 10px;
             position: relative;
             margin: 15px;
+            overflow: hidden;
         }
 
         .photo img {
@@ -37,6 +38,11 @@
             display: block;
             color: white;
             background-color: rgba(156, 121, 57, 0.468);
+        }
+
+        .photo-frame:hover .photo {
+            transform: scale(1.5) skew(30deg);
+            transition: transform 2s ease-in-out;
         }
 
         .photo-details {
