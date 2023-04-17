@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1 onclick="console.log('h1 is clicked')">Event niye clickbaji</h1>
+    <h1 onclick="alert('masud valo hoye jaw')">Event niye clickbaji</h1>
+    <button onclick="console.log(7)">Click me</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">Click for yellow</button>
+    <button onclick="makeRed()">Click for Red</button>
+    <button onclick="makeWhite()">Click for White</button>
+    <button id="make-blue-button">Click for Blue</button>
+    <button id="make-green-button">Click for Green</button>
+    <button id="make-goldenRod-button">Click for goldenrod</button>
+    <button id="make-lightBlue-button">Click for lightblue</button>
+
+    <script src="js/events.js"></script>
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'red';
+        }
+
+
+    </script>
+</body>
+
+</html>
