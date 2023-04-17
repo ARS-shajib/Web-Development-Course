@@ -14,6 +14,15 @@
     </header>
     <main>
         <section id="blogs">
+            <header>
+                <h2>Blog list</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
             <article class="blog">
                 <h3 id="first-title">My Blog-1</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia atque illo quam ad facilis sed
@@ -66,6 +75,34 @@
         thirdTitle.style.backgroundColor = 'salmon';
         thirdTitle.style.padding = '10px';
         thirdTitle.style.marginLeft = '20px';
+
+        // create and add element by using JS
+
+        //create the element
+        const li = document.createElement('li');
+        li.innerText = 'Blog-5';
+
+        //where to add
+        const ul = document.getElementById('blog-list');
+
+        //append the element 
+        ul.appendChild(li);
+
+        // add article
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My Blog-5';
+        const p = document.createElement('p');
+        p.innerText = 'possimus sit doloremque consectetur culpa repudianda possimus sit doloremque consectetur culpa repudiand culpa illo eius dolores a omni voluptatibus voluptatem.';
+
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        //parent of article
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
 
         // **** explore getElementsByClassName
         const blogs = document.getElementsByClassName('blog');
