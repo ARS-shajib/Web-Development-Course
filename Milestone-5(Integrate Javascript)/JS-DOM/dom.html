@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>welcome to my blog</h1>
+    </header>
+    <main>
+        <section id="blogs">
+            <article class="blog">
+                <h3 id="first-title">My Blog-1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia atque illo quam ad facilis sed
+                    sunt rem qui obcaecati eum, soluta enim praesentium tempore commodi id illum dolores iste et.</p>
+            </article>
+            <article id="second-blog" class="blog">
+                <h3 id="second-title">My Blog-2</h3>
+                <p>Odit ea dolorum pariatur consequuntur, expedita dignissimos, accusamus ipsa quisquam aperiam nulla
+                    possimus iusto fugiat? Et rem minus quia porro quod deserunt nisi, iusto ex molestias quas quisquam
+                    non commodi.</p>
+            </article>
+            <article class="blog">
+                <h3 id="third-title">My Blog-3</h3>
+                <p>Ex voluptatem debitis rerum quis quaerat, possimus sit doloremque consectetur culpa repudiandae
+                    neque. Quam, enim quia omnis officia laborum qui inventore? Nobis culpa illo eius dolores a omnis
+                    voluptatibus voluptatem.</p>
+            </article>
+            <article class="blog">
+                <h3 id="fourth-title">My Blog-4</h3>
+                <p>Ex voluptatem debitis rerum quis quaerat, possimus sit doloremque consectetur culpa repudiandae
+                    neque. Quam, enim quia omnis officia laborum qui inventore? Nobis culpa illo eius dolores a omnis
+                    voluptatibus voluptatem.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const student = { name: 'kissmot ali', age: 16, height: 60 }
+        // console.log(document.body);
+
+        // **** explore getElementsByTagName
+
+        const blogTitles = document.getElementsByTagName('h3');
+        // console.log(blogTitles);
+
+        for (const h3 of blogTitles) {
+            // console.log(h3.innerText);
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+            // console.log(p);
+        }
+
+        // ****  explore getElementById
+
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        const thirdTitle = document.getElementById('third-title');
+        thirdTitle.innerText = 'Title updated by js';
+        thirdTitle.style.backgroundColor = 'salmon';
+        thirdTitle.style.padding = '10px';
+        thirdTitle.style.marginLeft = '20px';
+
+        // **** explore getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+
+        for (const blog of blogs) {
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+        }
+
+    </script>
+</body>
+
+</html>
