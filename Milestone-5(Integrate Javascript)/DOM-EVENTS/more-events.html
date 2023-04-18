@@ -29,26 +29,41 @@
         });
 
         //keydown
-        // document.getElementById('delete-confirm').addEventListener('keydown', function () {
-        //     const deleteField=document.getElementById('delete-confirm');
-        //     console.log(deleteField.value);
-        // });
+        document.getElementById('delete-confirm').addEventListener('keydown', function () {
+            const deleteField = document.getElementById('delete-confirm');
+            // console.log(deleteField.value);
+        });
 
         //keypress
-        // document.getElementById('delete-confirm').addEventListener('keypress', function () {
-        //     const deleteField=document.getElementById('delete-confirm');
-        //     console.log(deleteField.value);
-        // });
+        document.getElementById('delete-confirm').addEventListener('keypress', function () {
+            const deleteField = document.getElementById('delete-confirm');
+            // console.log(deleteField.value);
+        });
 
         //keyup
         document.getElementById('delete-confirm').addEventListener('keyup', function () {
             const deleteField = document.getElementById('delete-confirm');
-            console.log(deleteField.value);
+            // console.log(deleteField.value);
         });
         //change
         document.getElementById('delete-confirm').addEventListener('change', function () {
             const deleteField = document.getElementById('delete-confirm');
-            console.log(deleteField.value);
+            // console.log(deleteField.value);
+        });
+
+        document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
+            const deleteField = document.getElementById('delete-confirm');
+            // console.log(event.target.value);
+            deleteField.addEventListener('keyup', function (event) {
+                const deleteBtn = document.getElementById('delete-btn');
+
+                if (event.target.value == 'delete') {
+                    deleteBtn.removeAttribute('disabled');
+                }
+                else {
+                    deleteBtn.setAttribute('disabled', true);
+                }
+            })
         });
     </script>
 </body>
