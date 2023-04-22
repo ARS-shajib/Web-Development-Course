@@ -16,8 +16,14 @@ function displayUsers(data) {
 
     for (const user of data) {
         console.log(user.name);
-        const li = document.createElement('li');
+        let li = document.createElement('li');
         li.innerText = user.name;
+        ul.appendChild(li);
+
+        li = document.createElement('li');
+        li.innerHTML = `<h3>${user.name}</h3>
+        <div>${user.email}</div>
+        `
         ul.appendChild(li);
     }
 }
