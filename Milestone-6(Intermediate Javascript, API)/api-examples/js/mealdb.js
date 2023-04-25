@@ -1,4 +1,17 @@
+// Spinner...
+const toggleSpineer = displayStyle => {
+    document.getElementById('spinner').style.display = displayStyle;
+}
+
+// Result...
+const toggleResult = displayStyle => {
+    document.getElementById('search-result').style.display = displayStyle;
+}
+
+
 const searchFood = () => {
+    toggleSpineer('block');
+    toggleResult('none');
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText)
@@ -31,4 +44,6 @@ const displaySearchResult = meals => {
         `;
         searchResult.appendChild(div);
     })
+    toggleSpineer('none');
+    toggleResult('grid');
 }
