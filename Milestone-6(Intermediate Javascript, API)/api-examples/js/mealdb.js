@@ -1,3 +1,12 @@
+const searchButton = document.getElementById("button-search");
+const searchInput = document.getElementById("search-field");
+
+searchInput.addEventListener("keypress", function (event) {
+    // event.preventDefault();
+    if (event.key === 'Enter')
+        searchButton.click();
+});
+
 // Spinner...
 const toggleSpineer = displayStyle => {
     document.getElementById('spinner').style.display = displayStyle;
