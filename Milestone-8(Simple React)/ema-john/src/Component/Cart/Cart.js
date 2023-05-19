@@ -3,7 +3,6 @@ import './Cart.css';
 
 const Cart = (props) => {
     const { cart } = props;
-
     // const total = cart.reduce((previous, product) => previous + product.price, 0)
 
     let total = 0;
@@ -12,12 +11,14 @@ const Cart = (props) => {
     // }
 
     let totalQuantity = 0;
+    // console.log(cart);
     for (const product of cart) {
         if (!product.quantity) {
             product.quantity = 1;
         }
         total = total + product.price * product.quantity;
         totalQuantity = totalQuantity + product.quantity;
+        // console.log(totalQuantity, product.key);
     }
 
     const shipping = total > 0 ? 15 : 0;
@@ -33,6 +34,7 @@ const Cart = (props) => {
             <p>Shipping: ${shipping}</p>
             <p>tax: ${tax.toFixed(2)}</p>
             <p>Grand Total: ${grandTotal.toFixed(2)}</p>
+            {props.children}
         </div>
     );
 };
