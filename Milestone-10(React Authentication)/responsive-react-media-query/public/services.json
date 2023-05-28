@@ -3,35 +3,35 @@
         "id": 1,
         "name": "Car Mechanic-1",
         "price": "150",
-        "description": "Ruetian Car Mechanic-1",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin here, content here', making it look like readable English.",
         "img": "https://i.ibb.co/FKRwQ3h/1.jpg"
     },
     {
         "id": 2,
         "name": "Car Mechanic-2",
         "price": "250",
-        "description": "Buetian Car Mechanic-2",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin here, content here', making it look like readable English.",
         "img": "https://i.ibb.co/SwGjJW7/2.jpg"
     },
     {
         "id": 3,
         "name": "Car Mechanic-3",
         "price": "350",
-        "description": "Cuetian Car Mechanic-3",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin here, content here', making it look like readable English.",
         "img": "https://i.ibb.co/jkKdZGK/3.jpg"
     },
     {
         "id": 4,
         "name": "Car Mechanic-4",
         "price": "450",
-        "description": "Kuetian Car Mechanic-4",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin here, content here', making it look like readable English.",
         "img": "https://i.ibb.co/YLybT85/4.jpg"
     },
     {
         "id": 5,
         "name": "Car Mechanic-5",
         "price": "550",
-        "description": "Duetian Car Mechanic-5",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The poin here, content here', making it look like readable English.",
         "img": "https://i.ibb.co/tXgM2Cs/5.jpg"
     }
 ]
