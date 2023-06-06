@@ -7,8 +7,7 @@ import { clearTheCart, deleteFromDb } from '../../utilities/fakedb';
 import { useNavigate } from 'react-router-dom';
 
 const OrderReview = () => {
-    const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
     const navigate = useNavigate();
     const handleRemove = key => {
         const newCart = cart.filter(product => product.key !== key);
@@ -17,7 +16,7 @@ const OrderReview = () => {
     }
 
     const handlePlaceOrder = () => {
-        navigate('/placeorder');
+        navigate('/shipping');
         // setCart([]);
         // clearTheCart();
     }

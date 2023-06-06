@@ -9,4 +9,4 @@ const PlaceOrder = () => {
     );
 };
 
-export default PlaceOrder; <h1>This is Place Order</h1>
+export default PlaceOrder;

@@ -4,12 +4,14 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import { Link } from 'react-router-dom';
+import useCart from '../../hooks/useCart';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useCart();
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
+
     // products to be rendered on the UI
     const [displayProducts, setDisplayProducts] = useState([]);
     const size = 10;
@@ -40,7 +42,7 @@ const Shop = () => {
             }
             setCart(storedCart);
         }
-    }, [products]);
+    }, []);
 
 
 
