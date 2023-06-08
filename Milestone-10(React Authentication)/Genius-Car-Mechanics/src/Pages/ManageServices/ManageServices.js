@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ManageServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/services`)
+        fetch(`https://genius-car-mechanic-server-b262f7m1z-ars-shajib.vercel.app/services`)
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://genius-car-mechanic-server-b262f7m1z-ars-shajib.vercel.app/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
