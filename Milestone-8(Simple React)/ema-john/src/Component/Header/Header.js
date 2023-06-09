@@ -3,6 +3,7 @@ import logo from '../../images/logo.png';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { Spinner } from 'react-bootstrap';
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
@@ -12,6 +13,7 @@ const Header = () => {
                 <NavLink to="/shop">Shop</NavLink>
                 <NavLink to="/review">Order Review</NavLink>
                 <NavLink to="/inventory">Manage Inventory</NavLink>
+                {user.email && <NavLink to="/orders">Orders</NavLink>}
                 {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>}
                 {
                     user.email ?

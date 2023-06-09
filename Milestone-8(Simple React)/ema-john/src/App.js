@@ -12,6 +12,7 @@ import Register from './Component/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import Shipping from './Component/Shipping/Shipping';
+import Orders from './Component/Orders/Orders';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route element={<PrivateRoute />}>
               <Route element={<Shipping />} path='/shipping' exact />
+            </Route>
+            <Route element={<PrivateRoute />}>
+              <Route element={<Orders />} path='/orders' exact />
             </Route>
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />

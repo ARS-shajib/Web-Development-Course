@@ -2,8 +2,18 @@ const express = require('express');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 require('dotenv').config();
 const cors = require('cors');
+var admin = require("firebase-admin");
+
 const app = express();
 const port = process.env.PORT || 5000;
+
+// firebase admin initialization
+
+var serviceAccount = require("./ema-john-online-shopping-5cc06-firebase-adminsdk-qryy8-4fd31f2c95.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 
 //middleware
 app.use(cors());
@@ -19,6 +29,21 @@ const client = new MongoClient(uri, {
         deprecationErrors: true,
     }
 });
+
+async function verifyToken(req, res, next) {
+
+    if (req.headers?.authorization) {
+        const idToken = req.headers.authorization.split('Bearer ')[1];
+        try {
+            const decodedUser = await admin.auth().verifyIdToken(idToken);
+            req.decodedUserEmail = decodedUser.email;
+        }
+        catch {
+
+        }
+    }
+    next();
+}
 
 async function run() {
     try {
@@ -56,8 +81,24 @@ async function run() {
         });
 
         // Add Orders API
+        app.get('/orders', verifyToken, async (req, res) => {
+            const email = req.query.email;
+
+            if (req.decodedUserEmail === email) {
+                const query = { email: email };
+                const cursor = orderCollection.find(query);
+                const orders = await cursor.toArray();
+                res.json(orders);
+            }
+            else {
+                res.status(401).json({ message: 'User not authorized' })
+            }
+
+        });
+
         app.post('/orders', async (req, res) => {
             const order = req.body;
+            order.createdAt = new Date();
             const result = await orderCollection.insertOne(order);
             res.send(result);
         })
