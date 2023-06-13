@@ -7,17 +7,26 @@ import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import dayjs from 'dayjs';
 
-const Calender = () => {
-    const [date, setDate] = useState(new Date());
+const Calender = ({ date, setDate }) => {
+
+    const handleDateChange = (date1) => {
+        setDate(date1);
+    };
+
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
+            {/* <DatePicker
+                label="Select a date"
+                value={setDate}
+                onChange={handleDateChange}
+                renderInput={(params) => <TextField {...params} />}
+            /> */}
             <StaticDatePicker
                 displayStaticWrapperAs='desktop'
-            // value={date}
-            // onChange={(newValue) => {
-            //     setDate(newValue);
-            // }}
-            // renderInput={(props) => <TextField{...props} />}
+                value={setDate}
+                onChange={
+                    handleDateChange
+                }
             />
             {/* 
             <DemoContainer components={['DateCalendar', 'DateCalendar']}>
